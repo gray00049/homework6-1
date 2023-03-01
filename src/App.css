@@ -1,0 +1,87 @@
+.App {
+  width: 800px;
+  margin: 40px auto;
+}
+
+.watches-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.watch-item {
+  position: relative;
+}
+
+.watch-item__delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  font-size: 25px;
+  opacity: 0.5;
+  color: #ccc;
+  transition: opacity .3s;
+  cursor: pointer;
+}
+
+.watch-item__delete-btn:hover {
+  opacity: 1;
+}
+
+
+.watch {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url('https://webmg.ru/wp-content/uploads/2022/09/i-18-29-2048x2048.jpeg') center center / cover ;
+}
+
+.secondArrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 48%;
+  width: 1px;
+  background: #ff0000;
+  transform-origin: top center;
+}
+
+.minuteArrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 47%;
+  width: 2px;
+  background: #000;
+  transform-origin: top center;
+}
+
+.hourArrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 25%;
+  width: 2px;
+  background: #000;
+  transform-origin: top center;
+}
+
+.form {
+  display: flex;
+}
+
+.form__input-container {
+  flex-grow: 1;
+  margin-right: 30px;
+}
+
+.form input {
+  width: 100%;
+}
