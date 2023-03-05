@@ -24,11 +24,13 @@ export default function Watch({ cityName, timezone, onDelete }) {
     
     if (timezone == 0) {
       currentHours = UTCHours;
-    } else if (timezone < 0) {
-      currentHours = UTCHours - +timezone.substr(1);
+    } else if (+timezone < 0) {
+      currentHours = UTCHours - +timezone.replace('-', '');
     } else {
-      currentHours = UTCHours + +timezone.substr(1);
+      currentHours = UTCHours + +timezone.replace('+', '');
     }
+
+    console.log(timezone < 0);
 
 
     setState({
